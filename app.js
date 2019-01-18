@@ -1,16 +1,16 @@
-//change header to red, then black, when clicked
+//button changes header color (alternates red/black) when clicked
 
 const myHeading = document.getElementById('myHeading');
-let testVar;
+const myButton = document.getElementById('myButton');
+let buttonColor = '';
 
-myHeading.addEventListener('click', () => {
-    if (testVar !== 'red') {
+myButton.addEventListener('click', () => {
+    if (buttonColor !== 'red') {
         myHeading.style.color = 'red';
-        return testVar = 'red';
-    } else if (testVar === 'red') {
+        return buttonColor = 'red';
+    } else if (buttonColor === 'red') {
         myHeading.style.color = 'black';
-        return testVar = 'black';
+        return buttonColor = 'black';
     };
 });
 
-  
