@@ -1,16 +1,18 @@
-//button changes header color (alternates red/black) when clicked
-
-const myHeading = document.getElementById('myHeading');
+const myHeading = document.getElementsByTagName('h1')[0];
 const myButton = document.getElementById('myButton');
-let buttonColor = '';
+const errorNotPurple = document.getElementsByClassName('error-not-purple');
+let buttonColor = document.getElementById('myTextInput');
+let listItem = document.getElementsByTagName('li');
+
 
 myButton.addEventListener('click', () => {
-    if (buttonColor !== 'red') {
-        myHeading.style.color = 'red';
-        return buttonColor = 'red';
-    } else if (buttonColor === 'red') {
-        myHeading.style.color = 'black';
-        return buttonColor = 'black';
-    };
+        myHeading.style.color = buttonColor.value;
 });
 
+for ( let i = 0; i < listItem.length; i++ ) {
+    listItem[i].style.color = 'purple';
+}
+
+for ( let i = 0; i < errorNotPurple.length ; i++ ) {
+    errorNotPurple[i].style.color = 'red';
+}
